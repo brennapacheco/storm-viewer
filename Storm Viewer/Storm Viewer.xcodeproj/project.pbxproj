@@ -81,15 +81,15 @@
 			isa = PBXGroup;
 			children = (
 				65F61F0028C7990500EBAAD7 /* AppDelegate.swift */,
-				65F61F0228C7990500EBAAD7 /* SceneDelegate.swift */,
-				65F61F0428C7990500EBAAD7 /* ViewController.swift */,
-				65F61F0628C7990500EBAAD7 /* Main.storyboard */,
 				65F61F0928C7990800EBAAD7 /* Assets.xcassets */,
-				65F61F0B28C7990800EBAAD7 /* LaunchScreen.storyboard */,
-				65F61F0E28C7990800EBAAD7 /* Info.plist */,
 				65F61F1428C7A62700EBAAD7 /* Content */,
 				65F61F2928CA0A0500EBAAD7 /* DetailViewController.swift */,
 				65F61F2A28CA0A0500EBAAD7 /* DetailViewController.xib */,
+				65F61F0E28C7990800EBAAD7 /* Info.plist */,
+				65F61F0B28C7990800EBAAD7 /* LaunchScreen.storyboard */,
+				65F61F0628C7990500EBAAD7 /* Main.storyboard */,
+				65F61F0228C7990500EBAAD7 /* SceneDelegate.swift */,
+				65F61F0428C7990500EBAAD7 /* ViewController.swift */,
 			);
 			path = "Storm Viewer";
 			sourceTree = "<group>";
