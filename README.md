@@ -6,6 +6,8 @@ This app has concepts of table views and image views, app bundles, FileManager, 
 ### How to use:
 First, certify that you have Git installed on your machine, then clone this repository with the command below:
 
+```
 $ git clone https://github.com/brennapacheco/storm-viewer
+```
 
 After that, you could open the project with Xcode.
