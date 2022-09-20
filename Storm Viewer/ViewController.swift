@@ -17,25 +17,26 @@ class ViewController: UITableViewController {
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        setupFileManager()
+        setupRightBarButton()
+    }
+    
+    func setupFileManager() {
         let fm = FileManager.default
         
         guard let path = Bundle.main.resourcePath else { return }
         
         do {
-            
             let items = try fm.contentsOfDirectory(atPath: path)
-            
             for item in items {
                 if item.hasPrefix("nssl") {
                     pictures.append(item)
                     pictures.sort()
                 }
             }
-            
         } catch {
             print("Failed to save images.")
         }
-
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,6 +56,17 @@ class ViewController: UITableViewController {
             vc.totalOfPictures = pictures.count
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    func setupRightBarButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(recommendAppTapped))
+    }
+    
+    @objc func recommendAppTapped(_ sender: AnyObject) {
+        let messageToShare = "Share Storm Viewer with friends!"
+        let urlToShare: URL = URL(string: "http://stormviewer.com/")!
+        let activityViewController = UIActivityViewController(activityItems: [messageToShare, urlToShare], applicationActivities: [])
+        self.present(activityViewController, animated: true)
     }
 }
 
